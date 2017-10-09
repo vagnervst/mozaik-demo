@@ -9,101 +9,83 @@
 port: 5000
 
 # define duraton between each dashboard rotation (ms)
-rotationDuration: 10000
+rotationDuration: 3000
 # define the interval used by Mozaïk Bus to call registered APIs
-apisPollInterval: 100000
+pollInterval: 0
 
 dashboards:
 - columns: 4
   rows:    3
-  title:   Mozaïk demo dashboard
+  title:   Pagar.Me <3
   widgets:
   -
-    extension:    github
-    widget:       UserBadge
-    user:         plouc
+    extension:    pagarme
+    widget:       IssuesPie
+    organization: pagarme
     columns:      1
     rows:         1
     x:            0
     y:            0
   -
-    extension:    github
-    widget:       OrgBadge
-    organization: ekino
+    extension:    pagarme
+    widget:       ReposIssuesPie
+    organization: pagarme
     columns:      1
-    rows:         1
+    rows:         2
+    x:            0
+    y:            1
+  -
+    extension:    pagarme
+    widget:       RecentlyCreatedIssuesLine
+    organization: pagarme
+    columns:      2
+    rows:         1.5
+    x:            1
+    y:            1.5
+  -
+    extension:    pagarme
+    widget:       RepositoriesIssuesBar
+    organization: pagarme
+    columns:      2
+    rows:         1.5
     x:            1
     y:            0
   -
-    extension:    github
-    widget:       RepoContributorsStats
-    repository:   plouc/mozaik
+    extension:    pagarme
+    widget:       RepositorySummary
     columns:      1
-    rows:         1
-    x:            2
-    y:            0
-  -
-    extension:    github
-    widget:       RepoBadge
-    repository:   plouc/mozaik
-    columns:      1
-    rows:         1
+    rows:         3
     x:            3
     y:            0
+- columns: 4
+  rows:    3
+  title:   Pagar.Me - Issues
+  widgets:
   -
-    extension:    mozaik
-    widget:       Inspector
-    columns:      1
-    rows:         1
+    extension:    pagarme
+    widget:       RelatedIssues
+    organization: pagarme
+    columns:      2
+    rows:         3
     x:            0
-    y:            1
+    y:            0
   -
-    extension:    github
-    widget:       Status
-    columns:      1
-    rows:         1
-    x:            1
-    y:            1
-  -
-    extension:    github
-    widget:       Branches
-    repository:   plouc/mozaik
-    columns:      1
-    rows:         1
+    extension:    pagarme
+    widget:       CompanyIssues
+    organization: pagarme
+    columns:      2
+    rows:         3
     x:            2
-    y:            1
+    y:            0
+- columns: 4
+  rows:    3
+  title:   Pagar.Me - Pull Requests
+  widgets:
   -
-    extension:    github
-    widget:       PullRequests
-    repository:   plouc/mozaik
-    columns:      1
-    rows:         1
-    x:            3
-    y:            1
-  -
-    extension:    travis
-    widget:       Repository
-    owner:        plouc
-    repository:   mozaik
-    columns:      1
-    rows:         1
+    extension:    pagarme
+    widget:       CompanyPullRequests
+    organization: pagarme
+    columns:      2
+    rows:         3
     x:            0
-    y:            2
-  -
-    extension:   travis
-    widget:      BuildHistogram
-    owner:       plouc
-    repository:  mozaik
-    columns:     2
-    rows:        1
-    x:           1
-    y:           2
-  -
-    extension:   travis
-    widget:      BuildHistory
-    owner:       plouc
-    repository:  mozaik
-    columns:     1
-    rows:        1
-    x:           3
-    y:           2
+    y:            0

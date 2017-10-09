@@ -1,0 +1,22 @@
+port: 5000
+
+# define duration between each dashboard rotation (seconds)
+rotationDuration: 10
+# define the interval used by Mozaïk Bus to call registered APIs
+apisPollInterval: 100000
+
+extension:   &extension sample
+user: &user vagner
+
+dashboards:
+- title:   GitHub Dashboard Demo 1 (mozaik-ext-github)
+  columns: 3
+  rows:    3
+  widgets:
+  - extension:    *extension
+    widget:       CustomBadge
+    user:         *github_user
+    columns:      1
+    rows:         1
+    x:            0
+    y:            0
