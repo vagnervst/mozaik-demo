@@ -17,6 +17,7 @@
     "npm": ">=3.0.0"
   },
   "dependencies": {
+    "mozaik-ext-pagarme": "^1.0.0",
     "@mozaik/ext-github": "^2.0.0-alpha.6",
     "@mozaik/ext-gitlab": "^2.0.0-alpha.3",
     "@mozaik/ext-time": "^2.0.0-alpha.11",
