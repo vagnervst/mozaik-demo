@@ -63,14 +63,14 @@ dashboards:
   rows:    3
   title:   Pagar.Me - Issues
   widgets:
-#   -
-#     extension:    pagarme
-#     widget:       RelatedIssues
-#     organization: pagarme
-#     columns:      2
-#     rows:         3
-#     x:            0
-#     y:            0
+  -
+    extension:    pagarme
+    widget:       RelatedIssues
+    organization: pagarme
+    columns:      2
+    rows:         3
+    x:            0
+    y:            0
   -
     extension:    pagarme
     widget:       CompanyIssues
